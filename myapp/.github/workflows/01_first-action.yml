@@ -1,18 +1,15 @@
-
-name: first Workflow
+name: First Workflow
 on: workflow_dispatch
 jobs:
-    First_job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: This is Step 1
-              run : echo Creating a yml file manually
-            - name: This is step 2
-              run : |
-                  echo Line 1
-                  echo Line 2
-    Second_Job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: This is second job step 1
-              run : echo this is second job step 1
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
+      - name: Multiline
+        run: |
+         echo This demo file shows a
+         echo very basic and easy-to-understand workflow. 
+        # echo ${{secrets.MY_NAME}} | sed 's/./& /g'
